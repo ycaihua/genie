@@ -26,6 +26,7 @@ import com.netflix.genie.common.dto.Command;
 import com.netflix.genie.common.dto.CommandStatus;
 import com.netflix.genie.common.dto.Job;
 import com.netflix.genie.common.dto.JobRequest;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -138,7 +139,7 @@ public class JobClientIntegrationTests extends GenieClientsIntegrationTestsBase 
 //        Assert.assertEquals(JobStatus.SUCCEEDED, jobStatus);
         final Job job = jobClient.getJob(id);
 
-//        Assert.assertEquals(jobId, job.getId());
+        Assert.assertEquals(jobId, job.getId());
 //
 //        final JobRequest jobRequest1 = jobClient.getJobRequest(jobId);
 //        Assert.assertEquals(jobId, jobRequest1.getId());
