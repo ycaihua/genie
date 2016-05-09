@@ -139,7 +139,7 @@ public class JobClientIntegrationTests extends GenieClientsIntegrationTestsBase 
 //        Assert.assertEquals(JobStatus.SUCCEEDED, jobStatus);
         final Job job = jobClient.getJob(id);
 
-        Assert.assertEquals(jobId, job.getId());
+        Assert.assertEquals("blah", job.getId());
 //
 //        final JobRequest jobRequest1 = jobClient.getJobRequest(jobId);
 //        Assert.assertEquals(jobId, jobRequest1.getId());

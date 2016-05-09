@@ -47,3 +47,10 @@ task uploadToPypi(type: Exec) {
     workingDir "src/main/python"
     commandLine "bash", "-c", "twine upload dist/*"
 }
+
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "short"
+    }
+}

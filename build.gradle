@@ -140,6 +140,11 @@ subprojects {
             excludeCategories 'com.netflix.genie.test.categories.UnitTest'
             excludeCategories 'com.netflix.genie.test.categories.DocumentationTest'
         }
+
+        testLogging {
+        events "failed"
+        exceptionFormat "short"
+    }
     }
 
     task documentationTests(type: Test, group: 'verification') {
