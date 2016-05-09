@@ -25,6 +25,7 @@ dependencies {
 
     /*******************************
      * Test Dependencies
+
      *******************************/
 
     testCompile(project(":genie-test"))
@@ -51,6 +52,6 @@ task uploadToPypi(type: Exec) {
 test {
     testLogging {
         events "failed"
-        exceptionFormat "short"
+        exceptionFormat "full"
     }
 }
