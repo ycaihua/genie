@@ -74,7 +74,6 @@ public class JobClientIntegrationTests extends GenieClientsIntegrationTestsBase 
      *
      * @throws Exception If there is any problem.
      */
-    @Ignore
     @Test
     public void canSubmitJob() throws Exception {
 
