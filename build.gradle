@@ -234,3 +234,10 @@ tasks.coveralls {
         System.env.'CI'
     }
 }
+
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
+}

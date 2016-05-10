@@ -28,6 +28,7 @@ import com.netflix.genie.common.dto.Job;
 import com.netflix.genie.common.dto.JobRequest;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -73,6 +74,7 @@ public class JobClientIntegrationTests extends GenieClientsIntegrationTestsBase 
      * @throws Exception If there is any problem.
      */
     @Test
+    @Ignore
     public void canSubmitJob() throws Exception {
 
         final String jobId = UUID.randomUUID().toString();
