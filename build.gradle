@@ -169,6 +169,13 @@ subprojects {
         jacocoTestReport.executionData += files("$buildDir/jacoco/${task.name}.exec")
     }
 
+    test {
+        testLogging {
+            events "failed"
+            exceptionFormat "short"
+        }
+    }
+
     license {
         excludes(["${projectDir}/src/generated/*"])
     }
@@ -232,12 +239,5 @@ tasks.coveralls {
     dependsOn jacocoRootReport
     onlyIf {
         System.env.'CI'
-    }
-}
-
-test {
-    testLogging {
-        events "failed"
-        exceptionFormat "full"
     }
 }
